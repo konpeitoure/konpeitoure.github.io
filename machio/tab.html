@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>タブメニュー</title>
+		<script src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery-3.1.1.slim.min.js"></script>
+
+		<script type="text/javascript">
+			$(function(){
+				
+				$("ul").on("click", "li",function() {
+					$("li.selected").removeClass("selected");
+					$(this).addClass("selected");
+					
+					myID = this.id.split("_")[1];
+					$("#textArea>div").hide();
+					$("#text_" + myID).show();
+					
+				})
+
+							
+			})			
+		</script>
+		<style type="text/css">
+		<!--
+			body{
+				font-family: "メイリオ", "Meiryo", "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "ＭＳ Ｐゴシック", "MS P Gothic", sans-serif;
+				line-height:1.0;
+				font-size:14px;
+				background-color: gray;/*○うすいグレー○*/
+			}
+			
+			ul {
+				margin: 10px;
+				
+			}
+			
+			ul li {/*○タブの見出し○*/
+				list-style:none;
+				height:20px;
+				margin:0px 0px 0px 10px;
+				padding:5px 15px 5px 15px;
+				color:white;
+				background-color: gray;/*○うすいグレー○*/
+				cursor:pointer;
+				
+				border-top: 1px #ddd solid;
+				border-left: 1px #ddd solid;
+				border-bottom: 1px #ddd solid;
+			}
+			
+			ul li.selected {
+				display: inline;
+				list-style:none;
+				color: #000;
+				background-color:#fff;
+				cursor:default;
+			}
+			
+			#textArea{
+				position: absolute;
+				left:200px;
+				top: 60px;
+				width:600px;
+				height:100px;
+				margin:0px 10px 10px 10px;
+				padding:10px;
+				border: 1px #ddd solid;
+			}
+			table,tr,td{
+			margin:0;
+			padding:0
+			}
+		-->
+		</style>	
+	</head>
+	
+	<body>
+		<ul><table class="t1">
+			<tr><td>
+			<li id="tab_1">tab_1</li>
+			</td>
+			</tr>
+			<tr><td>
+			<li id="tab_2">tab_2</li>
+			</td></tr>
+			<tr><td>
+			<li id="tab_3">tab_3</li>
+			</td></tr>
+			<table>
+			</ul>
+		
+				<div id="textArea">
+				<div id="text_1">tab_1のコンテンツ</div>
+				<div id="text_2">tab_2のコンテンツ</div>
+				<div id="text_3">tab_3のコンテンツ</div>
+				</div>
+	</body>
+	
+</html>

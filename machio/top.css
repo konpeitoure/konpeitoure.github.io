@@ -1,0 +1,277 @@
+body{
+  text-align: left;
+  color: white;
+  margin-top: 100px;
+  overflow: auto;
+	background-color:#333333;/*○グレー○*/
+  
+}
+.kiji{
+	margin-top: 5px;
+	margin-left:5px;
+	font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	font-size:9px;
+	width: 120px;
+	text-align:center;
+	border-top:none;
+	boder-bottom:none;
+	border-left:none;
+	padding-right: 5px;
+	border-right:2px dotted black;
+	height: 80%;
+	display:inline-block;
+	}
+.kiji-t{
+	color: white;
+	font-family: 'Josefin Sans', sans-serif;
+	font-size:20px;
+	}
+
+.kiji-c{
+	padding-top: 5px;
+	font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	font-size:10px;
+	align-content:center;
+	text-align:left;
+	width: 110px;
+	display: inline;
+    word-break: break-all;
+	}
+.samune{
+  filter: blur(5px);
+  filter: brightness(0.3);
+  border-radius: 80px;
+  height: 120px;
+  width: 120px;
+  float: right;
+	}
+a:link { color: #333333; text-decoration: none;}
+a:visited { color: #333333;text-decoration: none;}
+a:hover { color: gray; text-decoration: none;}
+a:active { color:blue; text-decoration: none;}
+
+.left-menu{/*○メニューディブ○*/
+width:100%;
+height:20%;
+margin: 2px;
+border: none;
+background-color: gray;/*○うすいグレー○*/
+text-align:center;
+padding-top: 10px;
+font-size: 23px;
+color: white;
+font-family: 'Josefin Sans', sans-serif;
+
+}
+
+.link{
+width:20px;
+height: auto;
+}
+
+.right-menu{/*○メニューディブ○*/
+width:47%;
+height:16%;
+text-align:center;
+background-color: gray;/*うすいグレー○*/
+border: none;
+float: right;
+color:black;/*○黒○*/
+margin: 2px;
+padding-top:2px;
+}
+.tategaki{
+writing-mode: tb-rl; /* IE独自仕様 */
+writing-mode: vertical-rl;
+}
+header{/*ヘッダー*/
+  position:fixed;
+  padding:0;
+  top:0;
+  left:0;
+  z-index:10;
+  width:100%;
+  height: 65px;
+  background-color: #1C1C1C;/*○濃いグレー○*/
+}
+.logo{/*○ヘッダーのロゴ○*/
+padding:0;margin:0;
+position: fixed;
+left:5px;top:5px;
+background-image: url("img/ha-to.png");
+background-repeat: no-repeat;
+background-position: left;
+width: 800px;
+}
+.title{
+padding:0;margin:0;
+display: inline-block;
+width:200px;height:50px;
+font-size: 40px;
+color: white;
+font-family: 'Josefin Sans', sans-serif;
+}
+
+/*○天気予報クエリー○*/
+.weather{
+padding:0;margin:0;
+display: inline-block;
+width:200px;height:50px;
+border: none;
+font-size:23px;
+color: gray;
+font-family: 'VT323', monospace;
+text-align:center;
+align-content:center;
+}
+/*○カレンダーのクエリー○*/
+.day{
+padding:0;margin:0;
+display: inline-block;
+width:200px;height:50px;
+border: none;
+font-size:33px;
+color: gray;
+font-family: 'VT323', monospace;
+text-align:center;
+align-content:center;
+}
+
+.box-1 {/*ボックス１*/
+float: left;
+border: none;
+background-color: gray;/*○うすいグレー○*/
+width: 50%;
+height: 200px;
+margin: 20px;
+padding:5px;
+margin-left: 120px;
+font-family: 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', Meiryo, メイリオ, Osaka, 'MS PGothic', arial, helvetica, sans-serif;
+font-size: 9pt;
+}
+
+.box-left {
+  position:fixed;
+  top: 65px;
+  bottom: 0;
+  left: 0;
+  width:5%;
+  height: 92%;
+  background-color:#333333;/*○グレー○*/
+  border: none;
+
+}
+
+.box-right {
+  z-index:2;
+  padding: 0px;
+  margin-top:0;
+  position:fixed;
+  bottom: 0;
+  right: 0;
+  width:28%;
+  height: 92%;
+  background-color: #1C1C1C;/*○濃いグレー○*/
+  border: none;
+  font-family: 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', Meiryo, メイリオ, Osaka, 'MS PGothic', arial, helvetica, sans-serif;
+  font-size: 9pt;
+}
+
+.box-right-c {
+  z-index:1;
+  position: relative;
+  right: 30%;
+  margin-top:0px;
+  padding-top: 30px;
+  width:60%;
+  height: 100%;
+ 
+  background-color: #1C1C1C;/*○濃いグレー○*/
+  border: none;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+ 
+/* For IE 6/7 (trigger hasLayout) */
+.boxContainer {
+    zoom: 1;
+}
+/*○ここからグーグルカスタム○*/
+#search-box {
+    width: 252px !important;
+    float: right;
+    margin-bottom: 5px;
+    margin-right: 11px;
+}
+#cse-search-box table.gsc-search-box td.gsc-input {
+    padding: 0 !important;
+}
+#cse-search-box input[type="text"] {
+    border-radius: 5px 0 0 5px;
+    height: 28px;
+    padding: 0 !important;
+    width: 189px;
+    float: left;
+    margin-left: 20px;
+}
+#cse-search-box input[type="submit"] {
+    border: 1px solid 
+    border-radius: 0 5px 5px 0;
+    float: right;
+    height: 28px;
+    margin-left: 0 !important;
+    width: 40px;
+    background-color:#013ADF;/*○ブルー○*/
+	color:#F2F2F2;/*○薄いグレー○*/
+	border: none;
+	
+}
+/*○ここまでグーグルカスタム○*/
+
+#formWrap {/*○フォーム○*/
+	width:250px;
+	height: auto;
+	margin:0;
+	padding:0;
+	color:#013ADF;/*○ブルー○*/
+	line-height:120%;
+	font-size:90%;
+	position:fixed;
+	bottom: 1px;
+	right: 5px;
+	 }
+#forminput{
+	background-color:#333333;/*○グレー○*/
+	color:#F2F2F2;/*○薄いグレー○*/
+	border: solid 1px #013ADF;/*○ブルー○*/
+	
+}
+#forminput-b{
+	background-color:#C0C0C0/
+	color:#F2F2F2;/*○薄いグレー○*/
+	border: none;
+	
+}
+
+table.formTable{
+	width:100%;
+	margin:0 auto;
+	border-collapse:collapse;
+}
+table.formTable td,table.formTable th{
+	padding:5px;
+}
+table.formTable th{
+	float: left;
+	width:30%;
+	font-weight:normal;
+	background:#efefef;
+	text-align:left;
+}/*○ここまでフォーム○*/
+.twi{/*○ツイッターのタイムライン○*/
+	  border: none;
+  text-align: center;
+}
+
+/*○ここからメニュータブ○*/

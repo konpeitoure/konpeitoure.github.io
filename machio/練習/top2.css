@@ -1,0 +1,31 @@
+
+.red{
+	width:100px;height:100px;
+	position:static;
+	background-color: red;
+}
+.blue{
+	width:100px;height:100px;
+	position:relative; top:10px; left:250px;
+	background-color: blue;
+}
+.green{
+	width:100px;height:100px;
+	float:bottom:10px left:200px;
+	background-color: green;
+}
+.orange{
+	width:100px;height:100px;
+	position:float;
+	background-color: orange;
+}
+.black{
+	width:100px;height:100px;
+	position:float;
+	background-color: black;
+}
+.yellow{
+	width:100px;height:100px;
+	position:float;
+	background-color: yellow;
+}
