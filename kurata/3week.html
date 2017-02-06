@@ -1,0 +1,158 @@
+<!--HTML5-->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>５分間の世界</title>
+<link rel="stylesheet" href="css/style.css">
+<!-- jQuery.jsの読み込み -->
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+<!-- スムーズスクロール部分の記述 -->
+<script>
+$(function(){
+   // #で始まるアンカーをクリックした場合に処理
+   $('a[href^=#]').click(function() {
+      // スクロールの速度
+      var speed = 400; // ミリ秒
+      // アンカーの値取得
+      var href= $(this).attr("href");
+      // 移動先を取得
+      var target = $(href == "#" || href == "" ? 'html' : href);
+      // 移動先を数値で取得
+      var position = target.offset().top;
+      // スムーススクロール
+      $('body,html').animate({scrollTop:position}, speed, 'swing');
+      return false;
+   });
+});
+</script>
+</head>
+<body>
+	<header class="header">
+		<h1 class="logo">
+			<a href="/">space of five minutes speech</a>
+		</h1>
+	</header>
+	
+	<!--ナビゲーションメニュー-->
+	<nav class="global-nav">
+		<ul>
+			<li class="nav-item active"><a href="index.html">HOME</a></li>
+			<li class="nav-item"><a href="#">1st week</a></li>
+			<li class="nav-item"><a href="2week.html">2nd week</a></li>
+			<li class="nav-item"><a href="3week.html">3rd week</a></li>
+			<li class="nav-item"><a href="#">4th week</a></li>
+			<li class="nav-item"><a href="#">5th week</a></li>
+		</ul>
+	</nav>
+	<!--メインとサイドメニューを横並びにするdiv要素を定義-->
+	<div class="wrapper">
+	
+		<!--メインを定義-->
+		<main class="main">
+			<section class="top-image">
+				<a href="index.html" class="top-image clearfix">
+					<img class="image" src="images/top-image.png"  art="top">
+					<div class="content">
+						<h2 class="top-image-title">自己主張を強いられる苦痛。<br>とっとと終わらせたい―<br>私にあるのはただそれだけだ。</h2>
+							<p class="top-image-text">私は人さまに向けたアウトプットが嫌いだ。
+								その理由について深く考えたことはないが、移り気ゆえ、ひとたび発話してしまうと
+								のちほど気が変わって人を困惑させてしまうことが多かったからだと思う。
+								・・・なおここの文章にあまり意味はないので矛盾してるとかつっこまないでください(笑)
+							</p>
+					</div>
+				</a>
+			</section>
+			
+			<section class="itnews">
+				<div class="itnews-content">
+					<h2 id="title">尊敬する人</h2>
+						<img class="image" src="images/sonkei-s.png" art="尊敬する人">
+						<div id ="1">
+							<h3>どんな人を尊敬してしまうのか？</h3>
+								<p>　尊敬する人について誰かに話すとき、私は絶句してしまう。心が震えた時、熱くなった時、
+								心を鎮めて能弁に語ることが難しい。この人の魅力を私は消化し、噛み砕き、伝えきることが
+								しっかりできているのか、不安になってしまう。それはそれとして、私はこの絶句という言葉が好きだ。
+								本来８行からなる律詩を４行で絶句した失語症の杜甫だが、詩の表現として
+								奇をてらったものではなく、本当に言葉が出なかったのだろうな。必要がなかったのだと思うし。
+								まあそういうわけで、歯切れが悪かったり筋の通りが悪かったりと
+								お見苦しい点もあるかと思いますが、なにとぞよろしくお付き合いくださいませ♪
+								残念ながらどうしても一人を選べなかったので、以下に「こういう人を尊敬しがちだ！」
+								という４点を書き記し、最後に「最近気になる偉人」について書いておきます。</p>
+							<a class="button" href="#title">さいしょにもどる</a>
+						</div>
+						<div id ="2">
+							<h3>①既存の価値を否定し、一つ上の価値を示せる人。②私の関数を書き換えてくれた人。</h3>
+								<p>　私は人間は関数の塊だと思う。私という関数に引数：宇宙を渡して、返ってきたのが
+								私という個性、大切なもの、自我なのかなって思う。だから自分に対する影響力というか
+								function生熊奈津美を書き換えて拡張してくれる存在を尊敬する。・・・少なくとも一目置く。
+								関数が増えて、知覚できること・返す値が増えて洗練することは
+								成長できたみたいな気持ちになれて単純に嬉しい。
+								無知ゆえに関数はわりとすぐインサート&アップデートしちゃうので、
+								１年前の私とは概ね精神的には別人なことが多く、よく気まぐれと言われてしまうが
+								この尊敬ポイントだけは変わらないんじゃないかなと思ってる・・・たぶん。</p>
+							<a class="button" href="#title">さいしょにもどる</a>
+						</div>
+						<div id ="3">
+							<h3>③ディストピアをユートピアに変えられる人。④無心で一つのことに情熱を持ち続けられる人。</h3>
+								<p>　国破れて山河在り。どこでも楽しく生きていける人間に憧れる。物理的にものを減らすことを頑張ってはいるものの、
+								まだまだ精神的には自由とは言い難く、いろいろ恐れているなって思う。杜甫なんかも戦乱の絶望の淵で家族に会えない辛さを
+								絶句しながら美しい詩で表現する心の強さや豊かさを持っていたし、小説の登場人物だが、坂口安吾『青鬼の褌を洗う女』
+								主人公：さちこさんの精神的タフさやしなやかさに強く惹かれる・・・。すごく筋通ってるなって思うし、
+								まさか地獄までもユートピア？にしてしまうのだからすごいな、私もいざとなったら野垂れ死にしようかな。
+								（そういうところに憧れるせいか、私の友人はすげー奔放で生命力の塊って感じの方が多い。絶対数は少ないが。）
+								あるいは④無心で打ち込めるものがあれば
+								どこでも楽しく生きていけるのだろうか。葛飾北斎みたいに・・・ってやっと人物まで来た(笑)</p>
+							<a class="button" href="#title">さいしょにもどる</a>
+						</div>
+						<div id ="4">
+							<h3>葛飾北斎の眩しすぎる功績</h3>
+								<p>　絶句(笑)てかタイムオーバー。肝心のページの出来栄えがアレなのにこれ以上書くと
+								「こいつ、本当は5分間スピーチ好きなんじゃね？」というあらぬ誤解を招きかねないので、
+								このあたりで筆をおきます。５分で伝えられるほど消化できてないしね。
+								aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+								aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+								aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+							<a class="button" href="#title">さいしょにもどる</a>
+						</div>
+						<div id ="5">
+							<h3>人魂でゆく気散じゃ夏の原</h3>
+								<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+								aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+								aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+								aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+								aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+							<a class="button" href="#title">読んでくれてダンケです♪さいしょにもどる</a>
+						</div>	
+				</div>
+			</section>
+			
+		</main>
+		
+		<!--サイドメニューを定義-->
+		<div class="sidemenu">
+			<h2 class="heding">PICK UP</h2>
+				<a href="2week.html"class="side-image-1">
+					<img class="image" src="images/itnews-s.png" art="ITニュース">
+					<div class="content">
+						<p class="text">2nd week：気になるITニュース<br>揮発する情報の価値とは？</p>
+					</div>
+				</a>
+				
+				<a href="3week.html"class="side-image-2">
+					<img class="image" src="images/sonkei-s.png" art="尊敬する人">
+					<div class="content">
+						<p class="text">3rd week：尊敬する人<br>特にいないので困った。</p>
+					</div>
+				</a>
+				
+
+		</div>
+		
+	</div>
+	<footer class="footer">
+			<p id = "Copyright">Copyright (C) 2016 space of five minuites speech . All Rights Reserved.</p>
+	</footer>
+
+</body>
+</html>

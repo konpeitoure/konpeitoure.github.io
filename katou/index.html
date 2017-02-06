@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>シングルページレイアウト</title>
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <header class="header" id="header">
+        <!-- <a href="#header"><img class="header-menu title-logo" src="images/title-logo.png"></a>
+        <nav class="header-menu site-menu">
+          <ul>
+            <li class="site-menu-list"><a href="#about">About</a></li>
+            <li class="site-menu-list"><a href="#item">Item</a></li>
+            <li class="site-menu-list"><a href="#column">Column</a></li>
+          </ul>
+        </nav>\-->
+        <nav id="menu-box">
+<div id="toggle"><a href="#">豆</a></div>
+	<ul id="menu" class="">
+		<li><a href="#about">About</a></li>
+		<li><a href="#item">Item</a></li>
+		<li><a href="#column">Column</a></li>
+	</ul>
+</nav>
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script type="text/javascript">
+$(function(){
+  $("#toggle").click(function(){
+    $("#menu").slideToggle();
+    return false;
+  });
+  $(window).resize(function(){
+    var win = $(window).width();
+    var p = 480;
+    if(win > p){
+      $("#menu").show();
+    } else {
+      $("#menu").hide();
+    }
+  });
+});
+$(function() {
+	var win = $(window).width();
+    var p = 480;
+    if(win < p)$(function(){
+		$("#menu li a").click(function(){
+			$("#menu").hide();
+		});
+	});
+});
+</script>
+      <div class="header-carousel">
+        <img src="images/carousel.jpg" class="carousel">
+      </div>
+    </header>
+    <section class="about">
+      <h2 class="heading" id="about">About</h2>
+      <p class="about-text">
+        「豆」</p>
+      <p class="about-text">
+          このサイトは、豆を使った食品に目がない私が、豆にまつわる食品や豆知識をご紹介します。<br>
+        とはいえ、納豆や豆腐、豆の煮物、餡こなど、豆食品はひじょうに多岐にわたるので、<br>
+        ここでは特に大好きな和菓子を中心にご紹介しようと思います。
+      </p>
+    </section>
+    <section class="item">
+      <h2 class="heading" id="item">Item</h2>
+      <div class="item-list">
+        <p class="item1">
+          <a href="mamedaifuku.html" class="mamedaifuku">豆大福</a>
+        </p>
+      </div>
+    </section>
+    <section class="column">
+      <h2 class="heading" id="column">Column</h2>
+      <div class="wrapper">
+        <div class="columns">
+          <div class="pin">
+            <a href="column.html"><img src="images/mamedaifuku/x1.jpg"></a>
+            <p>吾輩は猫である</p>
+          </div>
+          <div class="pin">
+            <a href="images/mamedaifuku/x2.jpg"><img src="images/mamedaifuku/x2.jpg"></a>
+            <p>豆大福だよーん</p>
+          </div>
+          <div class="pin">
+            <a href="images/mamedaifuku/x3.jpg"><img src="images/mamedaifuku/x3.jpg"></a>
+            <p>豆大福だよーん</p>
+          </div>
+          <div class="pin">
+            <a href="images/mamedaifuku/x4.jpg"><img src="images/mamedaifuku/x4.jpg"></a>
+            <p>豆大福だよーん</p>
+          </div>
+      </div>
+    <footer class="footer"></footer>
+  </body>
+</html>
