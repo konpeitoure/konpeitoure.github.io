@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<title>intecs</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!--キーワードを追加する必要-->
+<meta name="keywords" content="web design intecs インテックス" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- bootstrap-css -->
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<!--// bootstrap-css -->
+<!-- css -->
+<!---->
+<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+<link rel="stylesheet" href="css/style_2.css" type="text/css" media="all" />
+<!--// css -->
+<!-- gallery -->
+<link type="text/css" rel="stylesheet" href="css/cm-overlay.css" />
+<!-- //gallery -->
+<!-- font-awesome icons -->
+<link href="css/font-awesome.css" rel="stylesheet"> 
+<!-- //font-awesome icons -->
+<!-- font -->
+<link href="//fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+<link href="//fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+<!-- //font -->
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/SmoothScroll.min.js"></script>
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$(".scroll").click(function(event){		
+			event.preventDefault();
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+		});
+	});
+</script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<!--pop up-->
+<script src="js/jquery.js"></script>
+<script>
+$(function(){
+    // 「.modal-open」をクリック
+    $('.modal-open').click(function(){
+        // オーバーレイ用の要素を追加
+        $('body').append('<div class="modal-overlay"></div>');
+        // オーバーレイをフェードイン
+        $('.modal-overlay').fadeIn('slow');
+
+       // モーダルコンテンツのIDを取得
+        var modal = '#' + $(this).attr('data-target');
+        // モーダルコンテンツの表示位置を設定
+        modalResize();
+         // モーダルコンテンツフェードイン
+        $(modal).fadeIn('slow');
+
+       // 「.modal-overlay」あるいは「.modal-close」をクリック
+        $('.modal-overlay, .modal-close').off().click(function(){
+            // モーダルコンテンツとオーバーレイをフェードアウト
+            $(modal).fadeOut('slow');
+            $('.modal-overlay').fadeOut('slow',function(){
+                // オーバーレイを削除
+                $('.modal-overlay').remove();
+            });
+        });
+
+       // リサイズしたら表示位置を再取得
+        $(window).on('resize', function(){
+            modalResize();
+        });
+
+       // モーダルコンテンツの表示位置を設定する関数
+        function modalResize(){
+            // ウィンドウの横幅、高さを取得
+            var w = $(window).width();
+            var h = $(window).height();
+
+           // モーダルコンテンツの表示位置を取得
+            var x = (w - $(modal).outerWidth(true)) / 2;
+            var y = (h - $(modal).outerHeight(true)) / 2;
+
+           // モーダルコンテンツの表示位置を設定
+            $(modal).css({'left': x + 'px','top': 2 + 'em'});
+        }
+
+   });
+});
+</script>
+<!-- //pop-up-->
+</head>
+<body>
+	<!-- banner -->
+	<div class="banner">
+		<!-- header -->
+		<div class="header">
+			<div class="container">
+				<nav class="navbar navbar-default">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<div class="navbar-header">
+					  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					  </button>
+						<div class="w3layouts-logo">
+							<!--<h1><a href="index.html">intecs</a></h1>-->
+							<a href="index.html"><img src="./images/logo.png" alt="intecs"></a>
+						</div>
+					</div>
+
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
+						<nav>
+							<ul class="nav navbar-nav">
+								<li class="active"><a href="index.html">Home</a></li>
+								<li><a href="#services" class="scroll">Services</a></li>
+								<!--<li><a href="#test" class="scroll">Message</a></li>-->
+								<li><a href="#about" class="scroll">About</a></li>
+								<!--使わないためコメントアウト-->
+								<!--<li><a href="#gallery" class="scroll">Gallery</a></li> -->
+								<li><a href="#team" class="scroll">Team</a></li>
+								<li><a href="#mail" class="scroll">Contact Us</a></li>
+								<li><a href="#agileits-w3layouts-footer" class="scroll">Address</a></li> 
+							</ul>
+						</nav>
+					</div>
+					<!-- /.navbar-collapse -->
+				</nav>
+			</div>
+		</div>
+		<!-- //header -->
+		<div class="banner-top">
+			<div class="container">
+				<div class="slider">
+					<div class="callbacks_container">
+						<ul class="rslides callbacks callbacks1" id="slider4">
+							<!--<li>	
+								<div class="banner_text">
+									<h3>intecs</h3>
+									<p>In volutpat metus quis velit malesuada</p>
+									<!--<div class="w3-button">
+										<a href="#" data-toggle="modal" data-target="#myModal">Read More</a>
+									</div>
+								</div>
+							</li>-->
+							<li>	
+								<div class="banner_text">
+									<h3>JOIN US!</h3>
+									<!--<p>intecs採用サイト</p>-->
+									<!--<div class="w3-button">
+										<a href="#" data-toggle="modal" data-target="#myModal">Read More</a>
+									</div>-->
+								</div>
+							</li>
+						</ul>
+					</div>
+					<script src="js/responsiveslides.min.js"></script>
+					<script>
+						// You can also use "$(window).load(function() {"
+						$(function () {
+						  // Slideshow 4
+						  $("#slider4").responsiveSlides({
+							auto: true,
+							pager:true,
+							nav:true,
+							speed: 500,
+							namespace: "callbacks",
+							before: function () {
+							  $('.events').append("<li>before event fired.</li>");
+							},
+							after: function () {
+							  $('.events').append("<li>after event fired.</li>");
+							}
+						  });
+					
+						});
+					 </script>
+					<!--banner Slider starts Here-->
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //banner -->
+	<!-- modal -->
+	<div class="modal about-modal fade" id="myModal" tabindex="-1" role="dialog">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header"> 
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>						
+						<h4 class="modal-title">intecs</h4>
+					</div> 
+					<div class="modal-body">
+					<div class="agileits-w3layouts-info">
+						<img src="images/m1.jpg" alt="" />
+						<p></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //modal -->
+	<!-- services -->
+	<div class="services" id="services">
+		<div class="container">
+			<div class="wthree-heading">
+				<h3>Our Services</h3>
+				<h4>S</h4>
+			</div>
+			<div class="services-grids">
+				<div class="col-md-8 wthree-services-grids">
+					<div class="col-md-6 w3-agileits-services-grid">
+						<img src="./images/logo_m.png" alt="intecs">
+						<!--<i class="fa fa-cogs" aria-hidden="true"></i>-->
+						<h4>ネットワークセキュリティ</h4>
+						<p>企業情報や個人情報の流出防止は、現代の企業において重要な課題の1つです。
+インテックスでは、企業規模や業種・業態に応じて、様々な視点からオフィスのセキュリティ状態を診断・改善点をご提案します。</p>
+					</div>
+					<!--<div class="col-md-6 w3-agileits-services-grid agile-services1">-->
+					<div class="col-md-6 w3-agileits-services-grid">
+						<img src="./images/logo_m.png" alt="intecs">
+						<!--<i class="fa fa-comments" aria-hidden="true"></i>-->
+						<h4>システム開発</h4>
+						<p>経験に基づいた品質の高いシステム開発をご提供いたします。
+お客様のニーズに合わせたシステム開発やWebサイトの構築をいたします。
+本当に必要なものだけを選択・ご提案することにより、満足のいくシステム導入をご提供いたします。</p>
+					</div>
+					<div class="col-md-6 w3-agileits-services-grid">
+						<img src="./images/logo_m.png" alt="intecs">
+						<!--<i class="fa fa-heart" aria-hidden="true"></i>-->
+						<h4>IT教育</h4>
+						<p>実践に基づいたラーニング（教育）で、プロフェッショナルスキルを習得することができます。
+「ヒト」のもつ「無限の能力」を引き出し、その「チカラ」を「企業のチカラ」に変える！インテックスではそんな人材育成をトータルサポートいたします。</p>
+					</div>
+					<div class="col-md-6 w3-agileits-services-grid">
+						<img src="./images/logo_m.png" alt="intecs">
+						<!--<i class="fa fa-plane" aria-hidden="true"></i>-->
+						<h4>Web・コンテンツ</h4>
+						<p>「効果」と「デザイン」の融合されたWebサイト制作をいたします。Webサイト制作のことなら、ぜひ当社にお任せください！
+デザイン性のみならず、機能面の充実を図り、お客様にとって効果の高いWebサイトの構築をプロデュースします。</p>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+				<div class="col-md-4 services-right">
+					<img src="./images/logo_m.png" alt="intecs">
+					<!--<i class="fa fa-heart" aria-hidden="true"></i>-->
+					<h4>企業理念</h4>
+					<p>的確なサービスを、適切な価格で
+					<span>株式会社インテックスでは、この4つのサービスを基に、「最適なネットワークソリューションの提案」「経験に裏付けされた品質の高いシステムの提供」を行っております。</span>
+					</p>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+	<!-- services -->
+	<div class="test" id="test">
+	
+	</div>
+	<div class="clearfix"> </div>
+	<!-- aboutから移動 -->
+	<div class="about" id="about">
+		<div class="container">
+			<div class="wthree-heading">
+				<h2>求める人材</h2>
+				<h4>A</h4>
+			</div>
+			<div class="agileits-about-grids">
+				<div class="col-md-6 agileits-about-grid">
+					<img src="./images/logo_m.png" alt="intecs">
+					<h4>お客様を第一に考えられる人</h4>
+					<p>「どうしたら満足していただけるのか?」<br>「お客様は何を求めているのか?」<br>お客様の要望に対し、常に120%で答える気持ちを持ち続けることが出来る人を歓迎します。</p>
+				</div>
+				<div class="col-md-6 agileits-about-grid">
+					<img src="./images/logo_m.png" alt="intecs">
+					<h4>自らチャレンジする人</h4>
+					<p>「できない」「やったことなくてわからない」といった考えを<br>「どうしたらできるだろう」「何から学べばいいのだろう」と自ら考え行動することが大事です。<br>日々努力する事、前向きにチャレンジする人を歓迎します。</p>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+
+	<!-- gallery -->
+	<!--コメントアウト -->
+	<!--
+	<div class="gallery" id="gallery">
+		<div class="container">
+			<div class="wthree-heading">
+				<h3>Our Gallery</h3>
+				<h4>G</h4>
+			</div>
+			<div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
+					<ul id="myTab" class="nav nav-tabs" role="tablist">
+						<li role="presentation" class="active"><a href="#home-main" id="home-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">All</a></li>
+						<li role="presentation"><a href="#learning" role="tab" id="learning-tab" data-toggle="tab" aria-controls="learning">Everyday</a></li>
+						<li role="presentation"><a href="#playing" role="tab" id="playing-tab" data-toggle="tab" aria-controls="playing">Occasion</a></li>
+						<li role="presentation"><a href="#painting" role="tab" id="painting-tab" data-toggle="tab" aria-controls="painting">Trending</a></li>
+						<li role="presentation"><a href="#school" role="tab" id="school-tab" data-toggle="tab" aria-controls="school">Accessories</a></li>
+					</ul>
+					<div id="myTabContent" class="tab-content">
+						<div role="tabpanel" class="tab-pane fade in active" id="home-main" aria-labelledby="home-tab">
+							<!--<div class="w3_tab_img">
+								<div class="col-md-3 w3_tab_img_left">
+									<div class="demo">
+										<a class="cm-overlay" href="images/2.jpg">
+										  <figure class="imghvr-shutter-in-out-diag-2"><img src="images/2.jpg" alt=" " class="img-responsive" />
+										  </figure>
+										</a>
+									</div>
+								</div>
+								<div class="col-md-3 w3_tab_img_left">
+									<div class="demo">
+										<a class="cm-overlay" href="images/3.jpg">
+										  <figure class="imghvr-shutter-in-out-diag-2"><img src="images/3.jpg" alt=" " class="img-responsive" />
+										  </figure>
+										</a>
+									</div>
+								</div>
+								<div class="col-md-3 w3_tab_img_left">
+									<div class="demo">
+										<a class="cm-overlay" href="images/4.jpg">
+										  <figure class="imghvr-shutter-in-out-diag-2"><img src="images/4.jpg" alt=" " class="img-responsive" />
+											</figure>
+										</a>
+									</div>
+								</div>
+								<div class="col-md-3 w3_tab_img_left">
+									<div class="demo">
+										<a class="cm-overlay" href="images/5.jpg">
+										  <figure class="imghvr-shutter-in-out-diag-2"><img src="images/5.jpg" alt=" " class="img-responsive" />
+										</figure>
+										</a>
+									</div>
+								</div>
+								<div class="col-md-3 w3_tab_img_left">
+									<div class="demo">
+										<a class="cm-overlay" href="images/6.jpg">
+											<figure class="imghvr-shutter-in-out-diag-2"><img src="images/6.jpg" alt=" " class="img-responsive" />
+											</figure>
+										</a>
+									</div>
+								</div>
+								<div class="col-md-3 w3_tab_img_left">
+									<div class="demo">
+										<a class="cm-overlay" href="images/7.jpg">
+											<figure class="imghvr-shutter-in-out-diag-2"><img src="images/7.jpg" alt=" " class="img-responsive" />
+											</figure>
+										</a>
+									</div>
+								</div>
+								<div class="col-md-3 w3_tab_img_left">
+									<div class="demo">
+										<a class="cm-overlay" href="images/8.jpg">
+											<figure class="imghvr-shutter-in-out-diag-2"><img src="images/8.jpg" alt=" " class="img-responsive" />
+											</figure>
+										</a>
+									</div>
+								</div>
+								<div class="col-md-3 w3_tab_img_left">
+									<div class="demo">
+										<a class="cm-overlay" href="images/9.jpg">
+											<figure class="imghvr-shutter-in-out-diag-2"><img src="images/9.jpg" alt=" " class="img-responsive" />
+											</figure>
+										</a>
+									</div>
+								</div>
+								<div class="clearfix"> </div>
+							</div>
+						</div>
+						<div role="tabpanel" class="tab-pane fade" id="learning" aria-labelledby="learning-tab">
+							<div class="w3_tab_img">
+								<div class="col-md-3 w3_tab_img_left">
+									<div class="demo">
+										<a class="cm-overlay" href="images/2.jpg">
+											<figure class="imghvr-shutter-in-out-diag-2"><img src="images/2.jpg" alt=" " class="img-responsive">
+											</figure>
+										</a>
+									</div>
+								</div>
+								<div class="col-md-3 w3_tab_img_left">
+									<div class="demo">
+										<a class="cm-overlay" href="images/3.jpg">
+											<figure class="imghvr-shutter-in-out-diag-2"><img src="images/3.jpg" alt=" " class="img-responsive">
+											</figure>
+										</a>
+									</div>
+								</div>
+								<div class="clearfix"> </div>
+							</div>
+						</div>
+						<div role="tabpanel" class="tab-pane fade" id="playing" aria-labelledby="playing-tab">
+							<div class="w3_tab_img">
+								<div class="col-md-3 w3_tab_img_left">
+									<div class="demo">
+										<a class="cm-overlay" href="images/4.jpg">
+											<figure class="imghvr-shutter-in-out-diag-2"><img src="images/4.jpg" alt=" " class="img-responsive">
+											</figure>
+										</a>
+									</div>
+								</div>
+								<div class="col-md-3 w3_tab_img_left">
+									<div class="demo">
+										<a class="cm-overlay" href="images/5.jpg">
+											<figure class="imghvr-shutter-in-out-diag-2"><img src="images/5.jpg" alt=" " class="img-responsive">
+											</figure>
+										</a>
+									</div>
+								</div>
+								<div class="col-md-3 w3_tab_img_left">
+									<div class="demo">
+										<a class="cm-overlay" href="images/6.jpg">
+											<figure class="imghvr-shutter-in-out-diag-2"><img src="images/6.jpg" alt=" " class="img-responsive">
+											</figure>
+										</a>
+									</div>
+								</div>
+								<div class="col-md-3 w3_tab_img_left">
+									<div class="demo">
+										<a class="cm-overlay" href="images/7.jpg">
+											<figure class="imghvr-shutter-in-out-diag-2"><img src="images/7.jpg" alt=" " class="img-responsive">
+											</figure>
+										</a>
+									</div>
+								</div>
+								<div class="clearfix"> </div>
+							</div>
+						</div>
+						<div role="tabpanel" class="tab-pane fade" id="painting" aria-labelledby="painting-tab">
+							<div class="w3_tab_img">
+								<div class="col-md-3 w3_tab_img_left">
+									<div class="demo">
+										<a class="cm-overlay" href="images/8.jpg">
+											<figure class="imghvr-shutter-in-out-diag-2"><img src="images/8.jpg" alt=" " class="img-responsive">
+											</figure>
+										</a>
+									</div>
+								</div>
+								<div class="col-md-3 w3_tab_img_left">
+									<div class="demo">
+										<a class="cm-overlay" href="images/9.jpg">
+											<figure class="imghvr-shutter-in-out-diag-2"><img src="images/9.jpg" alt=" " class="img-responsive">
+											</figure>
+										</a>
+									</div>
+								</div>
+								<div class="col-md-3 w3_tab_img_left">
+									<div class="demo">
+										<a class="cm-overlay" href="images/2.jpg">
+											<figure class="imghvr-shutter-in-out-diag-2"><img src="images/2.jpg" alt=" " class="img-responsive">
+											</figure>
+										</a>
+									</div>
+								</div>
+								<div class="clearfix"> </div>
+							</div>
+						</div>
+						<div role="tabpanel" class="tab-pane fade" id="school" aria-labelledby="school-tab">
+							<div class="w3_tab_img">
+								<div class="col-md-3 w3_tab_img_left">
+									<div class="demo">
+										<a class="cm-overlay" href="images/3.jpg">
+											<figure class="imghvr-shutter-in-out-diag-2"><img src="images/3.jpg" alt=" " class="img-responsive">
+											</figure>
+										</a>
+									</div>
+								</div>
+								<div class="clearfix"> </div>
+							</div>
+						</div>
+					</div>
+			</div>
+			<script src="js/jquery.tools.min.js"></script>
+			<script src="js/jquery.mobile.custom.min.js"></script>
+			<script src="js/jquery.cm-overlay.js"></script>
+			<script>
+				$(document).ready(function(){
+					$('.cm-overlay').cmOverlay();
+				});
+			</script>
+		</div>
+	</div>-->
+	<!-- //gallery -->
+	<!-- team -->
+	<div class="jarallax team" id="team">
+		<div class="container">
+			<div class="wthree-heading team-heading">
+				<h3>Amazing Team</h3>
+				<h4>T</h4>
+			</div>
+			<div class="agileits-team-grids">
+				<div class="col-md-3 agileits-team-grid">
+					<div class="team-info">
+						<img src="images/tokiwa.jpg" alt="">
+						<div class="team-caption"> 
+							<h4>常盤侑暉</h4>
+							<h5>営業</h5>
+							<!--<p>営業</p>-->
+							<ul>
+								<!--<li><a href="http://intecs.ne.jp/company/member.php#tokiwa" target="blank">Read More</a></li>-->
+								<!--<li><a data-target="con1" class="modal-open">Read More</a></li>-->
+								<li><a data-target="modal1" class="modal-open">Read More</a></li>
+								<!--<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+								<li><a href="#"><i class="fa fa-rss"></i></a></li>-->
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 agileits-team-grid">
+					<div class="team-info">
+						<img src="images/shimo.jpg" alt="">
+						<div class="team-caption"> 
+							<h4>下山健</h4>
+							<h5>技術講師</h5>
+							<ul>
+								<!--<li><a href="http://intecs.ne.jp/company/member.php#shimoyama" target="blank">Read More</a></li>-->
+								<li><a data-target="modal2" class="modal-open">Read More</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 agileits-team-grid">
+					<div class="team-info">
+						<img src="images/fuku.jpg" alt="">
+						<div class="team-caption"> 
+							<h4>福島未七美</h4>
+							<h5>プログラマ</h5>
+							<ul>
+								<!--<li><a href="http://intecs.ne.jp/company/member.php#fukushima" target="blank">Read More</a></li>-->
+								<li><a data-target="modal3" class="modal-open">Read More</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 agileits-team-grid">
+					<div class="team-info">
+						<img src="images/yamada.jpg" alt="">
+						<div class="team-caption" id="team-caption"> 
+							<h4>山田祐太</h4>
+							<h5>プログラマ</h5>
+							<ul>
+								<!--<li><a href="http://intecs.ne.jp/company/member.php" target="blank">Read More</a></li>-->
+								<li><a data-target="modal4" class="modal-open">Read More</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+	<!-- team -->
+	<!--Modal contents-->
+		<div id="modal1" class="modal-content">
+ 			<h1>常盤侑暉</h1>
+ 			<div id="modal_img" class="modal_img">
+ 				<img src="images/tokiwa.jpg">
+ 			</div>
+ 			<p>弊社では、システム開発やWebサイト制作、IT教育に力を入れており、その為のテキスト作成や講師を主に行っています。人に教えるためには、知識・技術力が必要となりその為に勉強が必要ですが、自身のスキルアップにも繋がる為、日々向上心を持って取り組んでいます。<br>また、他社ではなかなか経験できないような業務や幅広い分野の業務にも携わる事で、新たな発見をする楽しみもあります。社内の雰囲気も良く、社員全員が「報・連・相」を心がけながら仕事に取り組んでいます。</p>
+ 			<a class="modal-close">×</a>
+		</div>
+		<div id="modal2" class="modal-content">
+ 			<h1>下山健</h1>
+ 			<div id="modal_img" class="modal_img">
+ 				<img src="images/shimo.jpg">
+ 			</div>
+ 			<p>弊社はリッツカールトンホテル並みの店員がいるIT業界のコンビニを目指し日々業務に取り組んでいます。<br>インテックスに頼めばなんとかしてくれる。そのようなお客様の期待に120％で応えられるよう、社員全員が何かしらのスペシャリストかつオールマイティになれるよう、ひとりひとりが意識を高く持ち仕事に取り組んでいます。<br>私もその一員としてIT技術、社会人基礎力、基礎学力を磨き、知識を知恵として仕事に活かせるよう日夜スキルアップに励んでいます。平均年齢が20代の若い会社で全員がやる気に満ち溢れており、切磋琢磨しあえる環境です。</p>
+ 			<a class="modal-close">×</a>
+		</div>
+		<div id="modal3" class="modal-content">
+ 			<h1>福島未七美</h1>
+ 			<div id="modal_img" class="modal_img">
+ 				<img src="images/fuku.jpg">
+ 			</div>
+ 			<p>私は、2016年4月に入社致しました。<br>インテックスには「的確なサービスを、適切な価格で」という言葉通り、お客様にはNOと言わず、様々なITサービスを提供するという考えに強く惹かれ入社を決意致しました。先輩方は、専門的知識が豊富で、システム開発やWebサイト制作、IT教育の講師など多方面でご活躍されていて、とても格好良く憧れです。私も先輩方のように立派なSEになれるように日々精進しています。</p>
+ 			<a class="modal-close">×</a>
+		</div>
+		<div id="modal4" class="modal-content">
+ 			<h1>山田祐太</h1>
+ 			<div id="modal_img" class="modal_img">
+ 				<img src="images/yamada.jpg">
+ 			</div>
+ 			<p>弊社では、システム開発やWebサイト制作、IT教育に力を入れており、その為のテキスト作成や講師を主に行っています。人に教えるためには、知識・技術力が必要となりその為に勉強が必要ですが、自身のスキルアップにも繋がる為、日々向上心を持って取り組んでいます。<br>また、他社ではなかなか経験できないような業務や幅広い分野の業務にも携わる事で、新たな発見をする楽しみもあります。社内の雰囲気も良く、社員全員が「報・連・相」を心がけながら仕事に取り組んでいます。</p>
+ 			<a class="modal-close">×</a>
+		</div>
+	<!--Modal contents-->
+	<!-- contact -->
+	<div class="contact" id="mail">
+		<div class="container">
+			<div class="wthree-heading">
+				<h3>Contact Us</h3>
+				<h4>C</h4>
+			</div>
+			<div class="container-recruit-requirements-new-lower">
+        	<h2 class="single-line-heading single-line-heading-recruit-requirements-new">
+            	<span class="single-line-heading-left single-line-heading-left-ja ie-fix">募集要項
+                <span class="single-line-heading-right single-line-heading-right-en">REQUIREMENTS</span>
+                </span>
+              </h2>
+              <dl class="description-list">
+                <dt>
+                  <span>職種</span>
+                </dt>
+                <dd>                       
+                	<p>Web・システム開発講師</p>
+                </dd>
+                <dt>
+                  <span>雇用形態</span>
+                </dt>
+                <dd>                       
+                	<p>正社員</p>
+                </dd>
+                <dt>
+                  <span>給与</span>
+                </dt>
+                <dd>                        
+                	<p>月給 184,800円〜</p>
+               </dd>
+                <dt>
+                  <span>賞与</span>
+                </dt>
+                <dd>                        
+                	<p>年2回　計1.5ヶ月分</p>
+                </dd>
+                <dt>
+                  <span>昇給</span>
+                </dt>
+                <dd>                        
+                	<p>ベースアップ込みの月あたり前年度実績　8,400円～16,800円</p>
+                </dd>
+                <dt>
+                  <span>休日休暇</span>
+                </dt>
+                <dd>                                     
+                	<p>土日祝　週休2日制<br>※6か月経過後の年次有給休暇日数　10日</p>
+                </dd>
+                <dt>
+                  <span>福利厚生</span>
+                </dt>
+                <dd>                       
+                	<p>社会保険完備（健康・厚生・労災・雇用）</p>
+                </dd>
+                <dt>
+                  <span>勤務地</span>
+                </dt>
+                <dd>                       
+                	<p>【名古屋】名古屋市中村区名駅三丁目21番7号　三交ビル6F<br>地下鉄・国際センター駅　下車徒歩1分</p>
+                </dd>
+                <dt>
+                  <span>就業時間</span>
+                </dt>
+                <dd>                       
+                	<p>08:45～17:45（休憩1時間　実働8時間）<br>時間外あり　月平均15時間</p>
+                </dd>
+              </dl>
+    	</div>
+			<div class="contact-form">
+				<p>ご応募は<a href="http://intecs.ne.jp/recruit/index.php" target="blank">こちらまで</a></p>
+				<!--<form action="#" method="post">
+					<input type="text" placeholder="SchoolName" required="">
+					<input type="text" placeholder="Name" required="">
+					<input type="text" placeholder="Telephone" required="">
+					<input type="text" placeholder="e-mail" required="">
+					<!--<input type="text" placeholder="Telephone" required="">-->
+					<!--<input type="text" placeholder="schoolname" required="">
+					<textarea placeholder="Message" required=""></textarea>
+					<input type="submit" value="SUBMIT">
+				</form>-->
+			</div>
+		</div>
+	</div>
+	<!-- //contact -->
+	<!-- map -->
+	<!--<div class="map-grid">
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d100949.24429313939!2d-122.44206553967531!3d37.75102885910819!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80859a6d00690021%3A0x4a501367f076adff!2sSan+Francisco%2C+CA%2C+USA!5e0!3m2!1sen!2sin!4v1472190196783" class="map" style="border:0" allowfullscreen=""></iframe>
+	</div>-->
+
+	<!-- //map -->
+	<!-- subscribe -->
+	<!--
+	<div class="subscribe">
+		<div class="container">
+			<div class="wthree-heading">
+				<h3>Subscribe With Us</h3>
+				<h4>S</h4>
+			</div>
+			<div class="w3-agileits-subscribe-form">
+				<form action="#" method="post">
+					<input type="text" placeholder="Subscribe" name="Subscribe" required="">
+					<button class="btn1">Subscribe</button>
+				</form>
+			</div>
+		</div>
+	</div>
+	-->
+	<!-- //subscribe -->
+	<footer>
+		<div class="agileits-w3layouts-footer" id="agileits-w3layouts-footer" >
+			<div class="container">
+				<!--<div class="col-md-4 w3-agile-grid">
+					<h5>To You</h5>
+					<p>あなたからのご応募お待ちしてます。</p>
+					<div class="agileinfo-social-grids">
+						<ul>
+							<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+							<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+							<li><a href="#"><i class="fa fa-rss"></i></a></li>
+							<li><a href="#"><i class="fa fa-vk"></i></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-4 w3-agile-grid">
+					<h5>recruitment officer</h5>
+					<div class="w3ls-post-grids">
+						<div class="w3ls-post-grid">
+							<div class="w3ls-post-img">
+								<a href="#"><img src="images/miz555.jpg" alt="" /></a>
+							</div>
+							<div class="w3ls-post-info">
+								<h6><a href="#" data-toggle="modal" data-target="#myModal">水野</a></h6>
+								<p>安心・安全な採用活動</p>
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+						<div class="w3ls-post-grid">
+							<div class="w3ls-post-img">
+								<a href="#"><img src="images/4.jpg" alt="" /></a>
+							</div>
+							<div class="w3ls-post-info">
+								<h6><a href="#" data-toggle="modal" data-target="#myModal">Proin scelerisque, sem a facilisis mollis</a></h6>
+								<p>Oct 25,2016</p>
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+						<div class="w3ls-post-grid">
+							<div class="w3ls-post-img">
+								<a href="#"><img src="images/9.jpg" alt="" /></a>
+							</div>
+							<div class="w3ls-post-info">
+								<h6><a href="#" data-toggle="modal" data-target="#myModal">Proin scelerisque, sem a facilisis mollis</a></h6>
+								<p>Nov 06,2016</p>
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+					</div>
+				</div>-->
+				<div class="col-md-4 w3-agile-grid">
+					<h5>Address</h5>
+					<div class="w3-address">
+						<div class="w3-address-grid">
+							<div class="w3-address-left">
+								<i class="fa fa-phone" aria-hidden="true"></i>
+							</div>
+							<div class="w3-address-right">
+								<h6>Phone Number</h6>
+								<p>
+								<span>名駅事務所 : 052-485-8407 FAX：052-485-8408</span>
+								<span>岐阜事務所 : 058-379-0335 FAX：058-379-0336</span>
+								</p>
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+						<div class="w3-address-grid">
+							<div class="w3-address-left">
+								<i class="fa fa-envelope" aria-hidden="true"></i>
+							</div>
+							<div class="w3-address-right">
+								<h6>Email Address</h6>
+								<p>Email :<a href="mailto:info@intecs.ne.jp"> info@intecs.ne.jp</a></p>
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+						<div class="w3-address-grid">
+							<div class="w3-address-left">
+								<i class="fa fa-map-marker" aria-hidden="true"></i>
+							</div>
+							<div class="w3-address-right">
+								<h6>Location</h6>
+								<p>名駅事務所 : 〒450-0002 名古屋市中村区名駅3-21-7名古屋三交ビル6F(8F・9Fは研修室) 
+								</p>
+								<p>岐阜事務所 : 〒509-0109 岐阜県各務原市テクノプラザ1-1 本館213 
+								</p>
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+						<!--位置を変更 -->
+						<div class="w3-address-grid" style="margin: 1em 2em;">
+							<div class="map-grid">
+								<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4612.276974630972!2d136.88613554316817!3d35.1722716027831!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600376db84b1a913%3A0x99128588617797e9!2z44CSNDUwLTAwMDIg5oSb55-l55yM5ZCN5Y-k5bGL5biC5Lit5p2R5Yy65ZCN6aeF77yT5LiB55uu77yS77yR4oiS77yX!5e0!3m2!1sja!2sjp!4v1485911608417" class="map" style="border:0" allowfullscreen=""></iframe>
+							</div>
+							<!--<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4612.276974630972!2d136.88613554316817!3d35.1722716027831!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600376db84b1a913%3A0x99128588617797e9!2z44CSNDUwLTAwMDIg5oSb55-l55yM5ZCN5Y-k5bGL5biC5Lit5p2R5Yy65ZCN6aeF77yT5LiB55uu77yS77yR4oiS77yX!5e0!3m2!1sja!2sjp!4v1485911608417" class="map" style="border:0" allowfullscreen=""></iframe></iframe>-->
+						</div>
+							<div class="clearfix"> </div>
+						</div>
+							<div class="clearfix"> </div>
+						</div>
+					</div>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+		<div class="copyright">
+			<div class="container">
+				<p>© 2017 Brand. All rights reserved | Design by W3layouts</p>
+			</div>
+		</div>
+	</footer>
+	<script type="text/javascript" src="js/move-top.js"></script>
+	<script type="text/javascript" src="js/easing.js"></script>
+	<!-- here stars scrolling icon -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+			/*
+				var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear' 
+				};
+			*/
+								
+			$().UItoTop({ easingType: 'easeOutQuart' });
+								
+			});
+	</script>
+<!-- //here ends scrolling icon -->
+<script src="js/jarallax.js"></script>
+	<script type="text/javascript">
+			/* init Jarallax */
+			$('.jarallax').jarallax({
+				speed: 0.5,
+				imgWidth: 1366,
+				imgHeight: 768
+			})
+		</script>
+</body>	
+</html>
